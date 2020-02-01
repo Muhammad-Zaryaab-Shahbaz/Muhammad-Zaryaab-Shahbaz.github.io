@@ -17,7 +17,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: cd goditmusic
     - run: npm install
     - run: npm run deployment --if-present
+    - run: cd ..
       env:
         CI: true
