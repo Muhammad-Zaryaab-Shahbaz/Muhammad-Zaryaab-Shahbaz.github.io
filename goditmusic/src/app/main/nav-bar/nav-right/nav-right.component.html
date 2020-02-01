@@ -1,0 +1,19 @@
+<ul class="navbar-nav">
+  <li>
+    <div class="dropdown drp-user" ngbDropdown [placement]="['bottom-left', 'bottom-right']">
+      <a href="javascript:" ngbDropdownToggle data-toggle="dropdown" class="wrap-it">
+        <i class="icon feather icon-user"></i> &nbsp;
+        <span> Obiquest </span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right profile-notification tempFix2" ngbDropdownMenu>
+
+        <ul class="pro-body">
+          <li><a class="dropdown-item" [routerLink]="['/profile']"><i class="feather icon-user"></i>
+            Account</a></li>
+          <li><a class="dropdown-item" [routerLink]="['/auth/logout']"><i
+              class="feather icon-lock"></i> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,23 @@
+<h3 class="header mb-2">Library</h3>
+<div class="row">
+  <div class="col-sm-12">
+    <app-card cardTitle="My Library" [options]="false" blockClass="gallery-masonry">
+      <div class="card-columns">
+        <div class="card" *ngFor="let item of library">
+          <img class="card-img-top" src="assets/images/library/{{item.imageSrc}}" [class.d-none]="playSong[item.index]"
+               alt="Song Preview" (click)="showVideo(item.index)">
+          <video playsinline="playsinline" controls="false" class="card-img-top" [class.d-none]="!playSong[item.index]"
+                 [src]="item.videoSrc"></video>
+          <div class="card-block">
+            <h5 class="job-card-desc">{{item.heading}}</h5>
+            <p>{{item.description}}</p>
+            <div class="job-meta-data mb-1">
+              <i class="far fa-eye"></i>{{item.views}}
+              <i class="far fa-thumbs-up ml-1"></i>{{item.likes}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>

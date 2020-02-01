@@ -1,0 +1,39 @@
+.tempFix {
+  left: -220px;
+}
+
+.scrollFix {
+  overflow: auto !important;
+  max-height: 263px !important;
+  width: 370px !important;
+}
+
+.tempFix2 {
+  left: -210px
+}
+
+.wrap-it {
+  max-width: 500px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.dropdown.drp-user.show:before {
+  left: auto !important;
+  right: 1%;
+}
+
+.dropdown .dropdown-menu {
+  min-width: 160px !important;
+}
+
+.profile-notification {
+  left: auto;
+  right: 5%;
+
+  .pro-body {
+    padding: 6px 0 !important;
+  }
+}
