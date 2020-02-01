@@ -18,5 +18,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: cd goditmusic && npm install
+    - run: cd goditmusic && npm run deployment --if-present
       env:
         CI: true
