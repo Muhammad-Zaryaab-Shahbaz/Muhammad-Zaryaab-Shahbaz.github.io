@@ -2,9 +2,14 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClickOutsideModule } from 'ng-click-outside';
-import { PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface, PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import {
+  PERFECT_SCROLLBAR_CONFIG,
+  PerfectScrollbarConfigInterface,
+  PerfectScrollbarModule
+} from 'ngx-perfect-scrollbar';
 import { CardModule } from './components/card/card.module';
 import { FooterComponent } from './components/footer/footer.component';
+import { ModalModule } from "./components/modal/modal.module";
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -17,7 +22,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     ReactiveFormsModule,
     ClickOutsideModule,
-    CardModule
+    CardModule,
+    ModalModule
   ],
   exports: [
     FooterComponent,
@@ -26,7 +32,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule,
     ReactiveFormsModule,
     ClickOutsideModule,
-    CardModule
+    CardModule,
+    ModalModule
   ],
   declarations: [
     FooterComponent

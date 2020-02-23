@@ -21,3 +21,17 @@
     </app-card>
   </div>
 </div>
+<!--  Confirmation Modal  -->
+<app-ui-modal #confirmModal>
+  <div class="app-modal-header">
+    <h5 class="modal-title">
+      New Feature Alert!
+    </h5>
+  </div>
+  <div class="app-modal-body">
+    <p> Library & Playlist coming soon... </p>
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-info" (click)="navigate()"> Go back!</button>
+  </div>
+</app-ui-modal>

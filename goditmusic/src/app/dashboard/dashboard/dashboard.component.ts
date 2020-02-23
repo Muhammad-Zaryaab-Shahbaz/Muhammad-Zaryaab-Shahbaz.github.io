@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { UiModalComponent } from "../../shared/components/modal/ui-modal/ui-modal.component";
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
+  @ViewChild('confirmModal', {static: false}) confirmModal: UiModalComponent;
   playSong: boolean[] = [false, false, false, false];
 
   library = [
@@ -47,7 +49,17 @@ export class DashboardComponent {
     },
   ];
 
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.confirmModal.show();
+    }, 100);
+  }
+
   showVideo(index): void {
     this.playSong[index] = true;
+  }
+
+  navigate(): void {
+    window.location.href = 'https://goditmusic.com';
   }
 }
