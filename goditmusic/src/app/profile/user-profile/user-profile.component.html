@@ -1,0 +1,136 @@
+<h4 class="header headerFontSize"> Account </h4>
+<div class="d-flex mt-4">
+  <div class="ml-auto p-2">
+    <button class="btn btn-md w-100 shadow-2 action-btn save"
+            (click)="saveUser()">
+      <img class="mr-1" alt="" src="../../../../assets/images/done.png"/> Update Profile
+    </button>
+  </div>
+</div>
+<app-card cardTitle='Your Basic Information' [options]="false" blockClass="table-border-style">
+  <form [formGroup]="form" [ngClass]="{'was-validated':showError}">
+    <div class="row mt-2">
+      <div class="col-md-4">
+        <label for="firstName">First Name</label>
+        <input formControlName="firstName" id="firstName" name="firstName"
+               [ngClass]="{'is-invalid': form.get('firstName').invalid && form.get('firstName').touched}"
+               type="text" class="form-control" placeholder="Enter first name"/>
+      </div>
+      <div class="col-md-4">
+        <label for="middleName">Middle Name</label>
+        <input formControlName="middleName" id="middleName" name="middleName"
+               [ngClass]="{'is-invalid': form.get('middleName').invalid && form.get('middleName').touched}"
+               type="text" class="form-control" placeholder="Enter middle name"/>
+      </div>
+      <div class="col-md-4">
+        <label for="lastName">Last Name</label>
+        <input formControlName="lastName" id="lastName" name="lastName"
+               [ngClass]="{'is-invalid': form.get('lastName').invalid && form.get('lastName').touched}"
+               type="text" class="form-control" placeholder="Enter last name"/>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-md-4">
+        <label for="city">City</label>
+        <input formControlName="city" id="city" name="city"
+               [ngClass]="{'is-invalid': form.get('city').invalid && form.get('city').touched}"
+               type="text" class="form-control" placeholder="Enter city"/>
+      </div>
+      <div class="col-md-4">
+        <label for="province">Province</label>
+        <input formControlName="province" id="province" name="province"
+               [ngClass]="{'is-invalid': form.get('province').invalid && form.get('province').touched}"
+               type="text" class="form-control" placeholder="Enter province"/>
+      </div>
+      <div class="col-md-4">
+        <label for="postalCode">Postal Code</label>
+        <input formControlName="postalCode" id="postalCode" name="postalCode"
+               [ngClass]="{'is-invalid': form.get('postalCode').invalid && form.get('postalCode').touched}"
+               type="text" class="form-control" placeholder="V7YIG6"/>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-md-4">
+        <label for="phone1">Phone 1</label>
+        <input formControlName="phone1" id="phone1"
+               name="phone1"
+               [ngClass]="{'is-invalid': form.get('phone1').invalid && form.get('phone1').touched}"
+               type="tel" class="form-control" placeholder="XXX-XXX-XXXX"/>
+      </div>
+      <div class="col-md-4">
+        <label for="phone2">Phone 2</label>
+        <input formControlName="phone2" id="phone2"
+               name="phone2"
+               [ngClass]="{'is-invalid': form.get('phone2').invalid && form.get('phone2').touched}"
+               type="tel" class="form-control" placeholder="XXX-XXX-XXXX"/>
+      </div>
+      <div class="col-md-4">
+        <label for="phone3">Phone 3</label>
+        <input formControlName="phone3" id="phone3"
+               name="phone3"
+               [ngClass]="{'is-invalid': form.get('phone3').invalid && form.get('phone3').touched}"
+               type="text" class="form-control" placeholder="XXX-XXX-XXXX"/>
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-md-4">
+        <label for="email1">Email 1</label>
+        <input formControlName="email1" id="email1" type="email" name="email1"
+               [ngClass]="{'is-invalid': form.get('email1').invalid && form.get('email1').touched}"
+               class="form-control" placeholder="lanacaralee@yahoo.com"/>
+      </div>
+      <div class="col-md-4">
+        <label for="email2">Email 2</label>
+        <input formControlName="email2" id="email2" type="email" name="email2"
+               [ngClass]="{'is-invalid': form.get('email2').invalid && form.get('email2').touched}"
+               class="form-control" placeholder="lanacaralee@yahoo.com"/>
+      </div>
+    </div>
+  </form>
+</app-card>
+
+
+<app-card [options]="false" [customHeader]="true" blockClass="table-border-style">
+  <div class="app-card-header">
+    <div class="row">
+      <div class="col-md-9">
+        <h5 class="cardHeading">Change Password</h5>
+      </div>
+      <div class="col-md-3">
+        <button class="btn action-btn save float-right" (click)="changePassword()">
+          <img class="mr-1 mb-1" src="../../../assets/images/done.png"> Update Password
+        </button>
+      </div>
+    </div>
+  </div>
+  <form [formGroup]="passwordForm" [ngClass]="{'was-validated':showPasswordError}" class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4 form-group">
+          <label for="oldPassword">Old Password</label>
+          <input type="password" id="oldPassword" class="form-control"
+                 placeholder="Enter Old Password"
+                 [ngClass]="{'is-invalid': passwordForm.get('oldPassword').invalid && passwordForm.get('oldPassword').touched}"
+                 formControlName="oldPassword">
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="newPassword">New Password</label>
+          <input id="newPassword" type="password" class="form-control"
+                 [ngClass]="{'is-invalid': passwordForm.get('newPassword').invalid && passwordForm.get('newPassword').touched}"
+                 placeholder="Enter New Password"
+                 formControlName="newPassword">
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="confirmNewPassword">Confirm New Password</label>
+          <input id="confirmNewPassword" type="password" class="form-control"
+                 [ngClass]="{'is-invalid': passwordForm.get('confirmNewPassword').invalid && passwordForm.get('confirmNewPassword').touched}"
+                 placeholder="Confirm New Password"
+                 formControlName="confirmNewPassword">
+        </div>
+      </div>
+    </div>
+  </form>
+</app-card>

@@ -16,6 +16,10 @@ const routes: Routes = [
       {
         path: 'library',
         loadChildren: './dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: 'profile',
+        loadChildren: './profile/profile.module#UserProfileModule'
       }
     ]
   },
