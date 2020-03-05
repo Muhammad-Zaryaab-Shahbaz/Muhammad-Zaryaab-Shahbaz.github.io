@@ -51,7 +51,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.confirmModal.show();
+      // TODO: Show dialog again
+      // this.confirmModal.show();
     }, 100);
   }
 

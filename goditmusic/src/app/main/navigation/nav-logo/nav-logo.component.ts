@@ -2,8 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav-logo',
-  templateUrl: './nav-logo.component.html',
-  styleUrls: ['./nav-logo.component.scss']
+  templateUrl: './nav-logo.component.html'
 })
 export class NavLogoComponent {
   @Input() navCollapsed: boolean;
