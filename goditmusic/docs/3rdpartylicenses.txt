@@ -305,6 +305,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+ngx-img-cropper
+
 ngx-perfect-scrollbar
 MIT
 The MIT License
